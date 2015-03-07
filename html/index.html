@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Laura Pigott - Assignment 6</title>
+		<style type="text/css">
+			span {display: inline-block;}
+			.normal {font-size: 16px;}
+			.bigger {font-size: 32px;}
+			.smaller {font-size: 8px;}
+			.selected {font-weight: 600;}
+			.hidden {display: none};
+		</style>
+		<script type="text/javascript" src="../scripts/jquery-1.11.2.js"></script>
+		<script>
+			$(document).ready(function() {
+				var $contents = $("#contents");
+				var keyValues = {
+					N: "normal",
+					B: "bigger",
+					S: "smaller",
+					T: "toggle"
+				}
+				styleContents("normal");
+				
+				$("#styler").click(function(event){
+					if($(event.target).prop("tagName") == "BUTTON")
+					{
+						var className = event.target.id;
+						styleContents(className);
+					}
+					else
+					{
+						$("#styler span").toggleClass("hidden");
+					}
+				});
+				
+				$(document).keyup(function(e){
+					var keyPressed = String.fromCharCode(e.which);
+					if(keyPressed in keyValues)
+					{
+						if(keyPressed == "T")
+						{
+							$("#styler").trigger("click");
+						}
+						else
+						{
+							styleContents(keyValues[keyPressed]);
+						}
+					}
+				});
+				
+				function styleContents(withClass)
+				{
+					$("#styler button").removeClass();
+					$("#" + withClass).addClass("selected");
+					$contents.removeClass().addClass(withClass);
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<span id="styler">
+			<h3>Style Controller</h3>
+			<span>
+				<button id="normal">Normal</button>
+				<button id="bigger">Bigger</button>
+				<button id="smaller">Smaller</button>
+			</span>
+		</span>
+		<div id="contents" class="normal">
+			This is the text that we want to change with each button
+		</div>
+	</body>
+</html>
