@@ -1,74 +1,138 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Laura Pigott - Assignment 6</title>
-		<style type="text/css">
-			span {display: inline-block;}
-			.normal {font-size: 16px;}
-			.bigger {font-size: 32px;}
-			.smaller {font-size: 8px;}
-			.selected {font-weight: 600;}
-			.hidden {display: none};
-		</style>
+		<title>The Holocaust - 70 Years Later</title>
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 		<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
-		<script>
-			$(document).ready(function() {
-				var $contents = $("#contents");
-				var keyValues = {
-					N: "normal",
-					B: "bigger",
-					S: "smaller",
-					T: "toggle"
-				}
-				styleContents("normal");
-				
-				$("#styler").click(function(event){
-					if($(event.target).prop("tagName") == "BUTTON")
-					{
-						var className = event.target.id;
-						styleContents(className);
-					}
-					else
-					{
-						$("#styler span").toggleClass("hidden");
-					}
-				});
-				
-				$(document).keyup(function(e){
-					var keyPressed = String.fromCharCode(e.which);
-					if(keyPressed in keyValues)
-					{
-						if(keyPressed == "T")
-						{
-							$("#styler").trigger("click");
-						}
-						else
-						{
-							styleContents(keyValues[keyPressed]);
-						}
-					}
-				});
-				
-				function styleContents(withClass)
-				{
-					$("#styler button").removeClass();
-					$("#" + withClass).addClass("selected");
-					$contents.removeClass().addClass(withClass);
-				}
-			});
-		</script>
+		<script type="text/javascript" src="scripts/custom.js"></script>
 	</head>
 	<body>
-		<span id="styler">
-			<h3>Style Controller</h3>
-			<span>
-				<button id="normal">Normal</button>
-				<button id="bigger">Bigger</button>
-				<button id="smaller">Smaller</button>
-			</span>
+		<!-- Introduction Screen -->
+		<div id="introScreen">
+			<div>
+				<h1>The Holocaust</h1>
+				<h2>70 Years Later</h2>
+				<h3>15th April 1945</h3>
+			</div>
+		</div>
+		<!-- Page Info -->
+		<div id="pageInfo">
+			<p>Percentage Scrolled = <span id="scrollInfo"></span></p>
+		</div>
+		
+		<!-- Grass -->
+		<div id="grass">
+		</div>
+		
+		<!-- Sky -->
+		<div id="sky">
+		</div>
+		
+		<!-- Ground -->
+		<img src="svgs/ground.svg" alt="Ground" id="ground">
+		
+		<!-- Background -->
+		<img src="svgs/mountain001.svg" alt="Mountain001"  class="mount1" data-speed="20">
+		<img src="svgs/mountain002.svg" alt="Mountain002"  class="mount2" data-speed="18">
+		<img src="svgs/mountain003.svg" alt="Mountain003"  class="mount3" data-speed="17"> 
+		
+		<!-- Auschwitz Back-->
+		<img src="svgs/auschwitzBack.svg" alt="Auschwitz Back"  class="auschwitz" data-speed="20">
+		<!-- Auschwitz Front -->
+		<img src="svgs/auschwitzFront.svg" alt="Archway Front"  class="auschwitz front" data-speed="20">
+		
+		<!-- Train Track-->			
+		<img src="svgs/trainTrack.svg" alt="Train Track" id="trainTrack" data-speed="10">
+	
+		<!-- Trees -->
+		<span class="treesBack">
+			<img src="svgs/tree001.svg" alt="Tree" class="tree" data-spacing="0.15" data-speed="8">
+			<img src="svgs/tree002.svg" alt="Tree" class="tree" data-spacing="0.21" data-speed="4">
+			<img src="svgs/tree003.svg" alt="Tree" class="tree" data-spacing="0.37" data-speed="6">
+			<img src="svgs/tree001.svg" alt="Tree" class="tree" data-spacing="0.40" data-speed="8">
+			<img src="svgs/tree002.svg" alt="Tree" class="tree" data-spacing="0.56" data-speed="5">
+			<img src="svgs/tree003.svg" alt="Tree" class="tree" data-spacing="0.61" data-speed="6">
+			<img src="svgs/tree001.svg" alt="Tree" class="tree" data-spacing="0.75" data-speed="8">
+			<img src="svgs/tree002.svg" alt="Tree" class="tree" data-spacing="0.81" data-speed="4">
+			<img src="svgs/tree003.svg" alt="Tree" class="tree" data-spacing="0.93" data-speed="6">
 		</span>
-		<div id="contents" class="normal">
-			This is the text that we want to change with each button
+		<span class="treesFront">
+			<img src="svgs/tree001.svg" alt="Tree" class="tree" data-spacing="0" data-speed="22">
+			<img src="svgs/tree002.svg" alt="Tree" class="tree" data-spacing="0.11" data-speed="26">
+			<img src="svgs/tree003.svg" alt="Tree" class="tree" data-spacing="0.25" data-speed="28">
+			<img src="svgs/tree001.svg" alt="Tree" class="tree" data-spacing="0.34" data-speed="24">
+			<img src="svgs/tree002.svg" alt="Tree" class="tree" data-spacing="0.40" data-speed="22">
+			<img src="svgs/tree003.svg" alt="Tree" class="tree" data-spacing="0.59" data-speed="26">
+			<img src="svgs/tree001.svg" alt="Tree" class="tree" data-spacing="0.61" data-speed="28">
+			<img src="svgs/tree002.svg" alt="Tree" class="tree" data-spacing="0.72" data-speed="22">
+			<img src="svgs/tree003.svg" alt="Tree" class="tree" data-spacing="0.89" data-speed="24">
+			<img src="svgs/tree001.svg" alt="Tree" class="tree" data-spacing="0.98" data-speed="26">
+		</span>
+		
+		<!-- Bergen Belsen -->
+		<img src="svgs/bergenBelsen.svg" alt="Bergen Belsen" id="bergenBelsen" data-speed="20">
+		
+		<!-- Train -->
+		<div id="fullTrain" data-speed="20">
+			<div id="trainCarriage">
+				<img src="svgs/trainCarriage.svg" alt="Carriage">
+				<div class="wheelContainer">
+					<img src="svgs/trainWheel.svg" alt="Wheel" class="wheel">
+					<img src="svgs/trainWheel.svg" alt="Wheel" class="wheel">
+				</div>
+			</div>
+			<div id="trainEngine">
+				<img src="svgs/trainEngine.svg" alt="Train">
+				<div class="wheelContainer">
+					<img src="svgs/trainWheel.svg" alt="Wheel" class="wheel">
+					<img src="svgs/trainWheel.svg" alt="Wheel" class="wheel">
+					<img src="svgs/trainWheel.svg" alt="Wheel" class="wheel">
+					<img src="svgs/trainWheel.svg" alt="Wheel" class="wheel">
+					<img src="svgs/trainWheel.svg" alt="Wheel" class="wheel">
+					<img src="svgs/trainWheel.svg" alt="Wheel" class="wheel">
+					<img src="svgs/trainWheel.svg" alt="Wheel" class="wheel">
+					<img src="svgs/trainWheel.svg" alt="Wheel" class="wheel">
+					<img src="svgs/trainWheel.svg" alt="Wheel" class="wheel">
+					<img src="svgs/trainWheel.svg" alt="Wheel" class="wheel">
+					<img src="svgs/trainWheel.svg" alt="Wheel" class="wheel">
+				</div>
+			</div>
+		</div>
+		
+		<!-- Infographics -->
+		<div id="infographics">
+			<div>The liberation of the victims of the Holocaust is celebrated each year on January 27th, with this year marking the 70th anniversary. On this date in 1945, the prisoners of the Auschwitz concentration camp were released.</div>
+			<div>For a large amount of survivors however, liberation was not attained for many more months. One such camp was Bergen-Belsen, located in Germany.</div>
+			<div>Between 1933 and 1945 there were over 20,000 camps built across Europe. These included Transit Camps, Concentration Camps, Labour Camps and Extermination Camps. The majority of these were sub-camps of larger ones, including Auschwitz.</div>
+			<div>Prisoners were transported between camps using the vast train network which spanned across Europe. Some of the carriages that they were transported had been used for transporting animals, so were unsanitary, without windows, and extremely over crowded. The journey could take up to seven days, depending on the location of the camp. Food and water were rarely provided, and due to this, a lot of the victims did not survive the journey.</div>
+			<div>It is estimated that of all those who arrived to Auschwitz on the trains, almost 80% were selected for immediate death. Of those who survived the selection process, many more lost their lives due to disease, malnutrition and dehydration.</div>
+			<div>Bergen-Belsen concentration camp, which originated as a Prisoner of War camp, was converted to a concentration camp in April 1943. In the two years that followed, even though Bergen-Belsen was not used as an extermination camp, approximately 37,000 prisoners died here.</div>
+			<div>In late 1944 Bergen-Belsen was thought to have contained 15,000 prisoners. By April 1945, this number had risen to 60,000 due to the evacuation of prisoners from other camps around Europe.</div>
+			<div>Anne Frank and her sister Margot were among the 85,000 additional prisoners who were relocated to Bergen-Belsen, when they were evacuated from Auschwitz in late 1944.</div>
+			<div>Anne and her sister both lost their lives in Bergen-Belsen concentration camp in March 1945, just three weeks before the prisoners were liberated.</div>
+			<div>On the 15th of April 1945 British forces entered the Bergen-Belsen camp. They released 60,000 prisoners, and discovered the remains of 13,000 more. Of the 60,000 rescued, more than 10,000 of them died within a matter of weeks of liberation from malnutrition and disease due to the conditions in which they had been found.</div>
+		</div>
+		
+		<!-- Count Box -->
+		<div id="countBox">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		
+		<!-- Rain -->
+		<div id="rain" data-speed="5">
+		</div>
+		
+		<!-- Exit Screen -->
+		<div id="exitScreen">
+			<h1>In total more than</h1>
+			<h2>lives were lost during the Holocaust</h2>
+			<h3>"Those who can not remember the past are condemned to repeat it..."</h3>
 		</div>
 	</body>
 </html>

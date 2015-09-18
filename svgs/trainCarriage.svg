@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 215 134.2" enable-background="new 0 0 215 134.2" xml:space="preserve">
+<symbol  id="Wheel" viewBox="-22 -21.9 44 43.7">
+	<path fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" d="M20.3,0c0-11.2-9.1-20.4-20.4-20.4
+		S-20.4-11.3-20.4,0S-11.3,20.3,0,20.3S20.3,11.2,20.3,0z"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="-0.5" y1="20" x2="-0.5" y2="-21"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="-21" y1="-0.5" x2="20" y2="-0.5"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="15" y1="14.6" x2="-13.8" y2="-14.2"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="-14.6" y1="14.2" x2="14" y2="-14.5"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="7.2" y1="18.7" x2="-7.2" y2="-19.1"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="-18.9" y1="7" x2="18.9" y2="-7.4"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="19.2" y1="8.3" x2="-17.8" y2="-8.4"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="-8.6" y1="18.4" x2="8" y2="-18.5"/>
+	<polygon display="none" fill="none" points="-22,21 22,21 22,-21 -22,-21 	"/>
+</symbol>
+<g id="Guide" display="none">
+</g>
+<g id="Guide2" display="none">
+</g>
+<g id="carriage">
+	<path id="hitch" fill="#4D4D4D" stroke="#000000" stroke-miterlimit="10" d="M214.5,106.9c0,1.1-3.1,2.8-6.9,2.8H157
+		c-3.9,0-7.5-1.7-7.5-2.8v-0.1c0-1.1,3.6-1.1,7.5-1.1h50.6c3.9,0,6.9-0.1,6.9,1.1V106.9z"/>
+	<g id="carriageBody">
+		<polygon id="frontPanel" fill="#333333" stroke="#000000" stroke-miterlimit="10" points="186.5,18.2 171.1,8.5 160.8,16.2 
+			161.5,111.7 186.5,103.7 		"/>
+		<path id="roof" fill="#333333" stroke="#000000" stroke-miterlimit="10" d="M1.3,15.1c0,0,9.7-8.4,18.9-10.7s59.2-3.9,72-3.9
+			s73.9-0.6,86,5c-2.7,7.1-5.5,7.1-5.5,7.1l-11.3,2.6L1.3,15.1z"/>
+		<rect id="sidePanel" x="1.5" y="15.7" fill="#808080" stroke="#000000" stroke-miterlimit="10" width="160" height="96"/>
+		<path id="roofArch" fill="#666666" stroke="#000000" stroke-miterlimit="10" d="M162,15c0,0,4.1-10.4,12.2-10.4
+			c8.2,0,12.2,12.3,12.2,13.6c0,2.3,0,2.5,0,2.5s-2.6-6.6-11.2-8.1c-8.6-1.4-13.5,5.3-13.5,5.3"/>
+	</g>
+	<g id="wheels" display="none">
+		
+			<use xlink:href="#Wheel"  width="44" height="43.7" x="-22" y="-21.9" transform="matrix(0.4971 0 0 -0.4971 128.2556 123.3633)" display="inline" overflow="visible"/>
+		
+			<use xlink:href="#Wheel"  width="44" height="43.7" x="-22" y="-21.9" transform="matrix(0.4971 0 0 -0.4971 34.311 123.3633)" display="inline" overflow="visible"/>
+	</g>
+	<g id="sideDecorations">
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="139.5" y1="15.2" x2="139.5" y2="112.2"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="128.5" y1="63.2" x2="128.5" y2="111.2"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="150.5" y1="63.2" x2="150.5" y2="111.2"/>
+		<polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="139.6,67 143.2,63.7 157.5,63.7 161.7,67.1 		"/>
+		<polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="118,67 121.5,63.7 136.3,63.7 140,67.1 		"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="23.5" y1="15.2" x2="23.5" y2="112.2"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="12.5" y1="63.2" x2="12.5" y2="111.2"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="34.5" y1="63.2" x2="34.5" y2="111.2"/>
+		<polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="22.9,67 26.4,63.7 40.8,63.7 45.4,67.1 		"/>
+		<polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="1.2,67 4.8,63.7 19.5,63.7 23.2,67.1 		"/>
+	</g>
+	<g id="door">
+		<rect id="doorPanel" x="45.5" y="15.7" fill="#4D4D4D" stroke="#000000" stroke-miterlimit="10" width="73" height="96"/>
+		
+			<line id="doorHandle002" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="105" y1="60.7" x2="115" y2="60.7"/>
+		<circle id="doorHandle001" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="105.9" cy="61" r="5.3"/>
+	</g>
+</g>
+<g id="Layer_6" display="none">
+</g>
+<g id="Coal" display="none">
+</g>
+<g id="Layer_2" display="none">
+	<path display="inline" fill="#808080" stroke="#000000" stroke-miterlimit="10" d="M194.4,62.9c0,0,33.3-64.6,39-66.1
+		c5.7-1.6,102.3,0,102.3,0l-3.3,114.8L194.4,62.9z"/>
+	<g display="inline">
+		<path fill="#666666" stroke="#000000" stroke-miterlimit="10" d="M333.5,131.2c-6.7,5.3-162.1,6.9-169.5,0c-4.7-4.3-21-58.4-14-64
+			c11.3-9,162.1-4.8,166.3-3C302.4,88.9,326.9,118.2,333.5,131.2z"/>
+	</g>
+</g>
+</svg>

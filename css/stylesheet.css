@@ -1,0 +1,270 @@
+/* Fonts */
+@font-face {
+    font-family: Libre;
+    src: url(../fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+/* Default Background */
+body {
+	background-color: #000000;
+	font-family: Libre;
+}
+
+/* Positions */
+#infographics > div, #introScreen, #exitScreen, #exitScreen h1, #exitScreen h2, #exitScreen h3, #introScreen > div, #fullTrain, #trainTrack, #pageInfo, .auschwitz, #grass, #sky, #ground, #bergenBelsen, #countBox, .tree, .treesFront, img[class*="mount"], .rainDrop{
+	position: fixed;
+}
+#bergenBelsen img, .auschwitz img, h1, h2, h3,{
+	position: absolute;
+}
+.trainCarriage, .auschwitz > div, .wheelContainer{
+	position: relative;
+}
+.tree, #countBox div, #trainCarriage, #trainEngine {
+	display: inline-block;
+}
+
+/* Rain */
+.rainDrop {
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: 18;
+	display: none;
+}
+
+/* Count Box */
+#countBox {
+	width: 60%;
+	z-index: 20;
+	font-family: Roboto;
+}
+#countBox div {
+	width: 12%;
+	background-color: #FFFFFF;
+	font-size: 1.5em;
+	text-align: center;
+	padding: 2% 0;
+	margin: 0;
+	border: 6px solid black;
+}
+
+/* Intro and Exit Screens */
+#introScreen {
+	z-index: 40;
+}
+#exitScreen {
+	z-index: 38;
+}
+#exitScreen h1, #exitScreen h2, #exitScreen h3 {
+	width: 80%;
+}
+#exitScreen h1 {
+	top: 8%;
+}
+#exitScreen h2 {
+	bottom: 20%;
+}
+#exitScreen h3 {
+	bottom: 5%;
+	display: none;
+}
+#introScreen, #exitScreen {
+	background-color: #000000;
+	top: 0;
+	left: 0;
+	color: #FFFFFF;
+}
+
+/* Buildings */
+.auschwitz {
+	z-index: 9;
+	width: 30%;
+	height: auto;
+}
+.auschwitz img{
+	width: 100%;
+}
+.auschwitz img, #grass, #sky, #ground {
+	top:0;
+	left:0;
+}
+#bergenBelsen
+{
+	width: 40%;
+	height: auto;
+}
+
+/* Background */
+#ground {
+	width: 100%;
+}
+
+/* Trees */
+.front {
+	z-index: 20;
+}
+.treesFront {
+	z-index: 20;
+}
+.treesFront > .tree{
+	height: 50%;
+}
+.treesBack > .tree{
+	height: 10%;
+}
+
+/* Infographics */
+#infographics > div{
+	z-index: 30;
+	display: none;
+	background: rgba(230, 230, 230, .8);
+	padding: 2%;
+	width: 50%;
+	border-radius: 4px;
+}
+h1, h2, h3 {
+	text-align: center;
+}
+h1{
+	font-size: 5em;
+}
+h2{
+	font-size: 3em;
+}
+h3{
+	font-size: 2em;
+}
+div[id*="info"]{
+	font-size: 1.2em;
+}
+#info2 {
+	font-size: 0em; 
+}
+#info3 {
+	left: 150%;
+}
+
+/* Background */
+.mount1{
+	height: 30%;
+	left: -30px;
+}
+.mount2 {
+	height: 25%;
+	left: -20px;
+}
+.mount3 {
+	height: 20%;
+	left: -10px;
+	margin-top: 2%;
+}
+#grass {
+	background-color: #093806;
+}
+#sky {
+	background-color: #BDCCD4;
+}
+#ground {
+	left: 0;
+}
+
+/* Train */
+#fullTrain {
+	z-index: 10;
+	width: 50%;
+	left: 0;
+}
+#trainEngine {
+	width: 58%;
+}
+#trainCarriage {
+	width: 40%;
+	margin-right: -4%;
+	z-index: -1;
+	color: #FF0000 !important;
+}
+#trainTrack {
+	width: 200%;
+	left: 0;
+}
+
+/* Wheels */
+.wheel {
+	position: absolute;
+	height: 100%;
+	bottom: 0;
+}
+
+/* Train Carriage */
+#trainCarriage .wheelContainer {
+	margin-top: -11%;
+}
+#trainCarriage .wheel:nth-child(1) {
+	left: 10%;
+}
+#trainCarriage .wheel:nth-child(2) {
+	left: 50%;
+}
+
+/* Train Engine */
+#trainEngine .wheelContainer {
+	margin-top: -8%;
+}
+#trainEngine .wheel:nth-child(1) {
+	left: 0%;
+}
+#trainEngine .wheel:nth-child(2) {
+	left: 8%;
+}
+#trainEngine .wheel:nth-child(3) {
+	left: 16%;
+}
+#trainEngine .wheel:nth-child(4) {
+	left: 24%;
+}
+#trainEngine .wheel:nth-child(5) {
+	left: 42%;
+}
+#trainEngine .wheel:nth-child(6) {
+	left: 50%;
+}
+#trainEngine .wheel:nth-child(7) {
+	left: 58%;
+}
+#trainEngine .wheel:nth-child(8) {
+	left: 66%;
+}
+#trainEngine .wheel:nth-child(9) {
+	left: 74%;
+}
+#trainEngine .wheel:nth-child(10) {
+	left: 88%;
+	height: 70%;
+}
+#trainEngine .wheel:nth-child(11) {
+	left: 93%;
+	height: 50%;
+}
+
+/* Page Info - Testing Purposes Only */
+#pageInfo {
+	z-index: 1;
+	display: none;
+}
+
+/* Hide While Loading */
+.hideAll {
+	opacity: 0;
+}
+
+@media screen and (max-device-width : 480px)
+{
+	#countBox {
+		width: 100% !important;
+		border-width: 2px;
+		margin: 0;
+	}
+}
